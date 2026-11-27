@@ -8,7 +8,7 @@ linker = "i686-linux-gnu-gcc"
 linker = "aarch64-linux-gnu-gcc"
 
 [target.aarch64-linux-android]
-linker = "aarch64-linux-android26-clang"
+linker = "clang"
 rustflags = ["-C", "link-args=-Wl,-rpath,/data/data/com.termux/files/usr/lib"]
 
 [target.armv7-linux-androideabi]

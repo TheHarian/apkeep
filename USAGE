@@ -18,6 +18,8 @@ Options:
           List the versions available
   -d, --download-source <download_source>
           Where to download the APKs from [default: google-play] [possible values: apk-pure, google-play, f-droid]
+      --splits <splits>
+          Download only selected Google Play splits
   -o, --options <options>
           A comma-separated list of additional options to pass to the download source
   -i, --ini <ini>

@@ -363,6 +363,7 @@ async fn main() {
                         }
                     }
 
+                    let splits: Vec<String> = matches.get_many::<String>("splits").map(|v| v.cloned().collect()).unwrap_or_default();
                     google_play::download_apps(
                         list,
                         parallel,
@@ -370,6 +371,7 @@ async fn main() {
                         &email.unwrap(),
                         aas_token.as_deref(),
                         auth_token.as_deref(),
+                        &splits,
                         &outpath.unwrap(),
                         accept_tos,
                         options,

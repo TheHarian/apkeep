@@ -88,6 +88,14 @@ pub fn app() -> Command {
                 .required(false),
         )
         .arg(
+            Arg::new("splits")
+                .help("Download only selected Google Play splits")
+                .long("splits")
+                .value_delimiter(',')
+                .action(ArgAction::Set)
+                .required(false),
+        )
+        .arg(
             Arg::new("options")
                 .help("A comma-separated list of additional options to pass to the download source")
                 .short('o')
